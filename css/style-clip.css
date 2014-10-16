@@ -1,0 +1,155 @@
+#navigation, #content2,.section{
+	padding:0;
+	margin:0;
+	list-style:none;
+	font-family: "Adobe Garamond", times, serif;
+}
+#content2{
+	overflow:hidden;
+	width:500px;
+	position:relative;
+	height:685px;
+	float:left;
+	margin-left: 100px;
+}
+	#content2 h2{
+		color:#e4f2fd;
+		margin:20px 0pt;
+		font-size: 17px;
+		text-transform: uppercase;
+	}
+	#content2 h3, #content2 p{
+		color:#e4f2fd;
+		margin:10px 0pt;
+		font-size: 15px;
+	}
+	#content2 a{
+		color:#777;
+		font-weight:bolder;
+		text-decoration:none;
+	}
+
+#navigation{
+	float:left;
+	width:320px;
+	height:300px;
+	position: absolute;
+	left: 56%;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+	#navigation .sup{
+		margin:15px 5px;
+		font-size:14px;
+	}
+		#navigation ul{
+			margin:5px 0;
+			list-style:circle;
+			padding-left:15px;						
+		}
+		#navigation a{
+			color:#fefefe;
+			font-weight:bolder;
+			text-decoration:none;
+		}
+		#navigation a.active {
+			color:#fff001;
+		}		
+
+		#navigation a:hover, #navigation a:focus, #navigation a:active{
+			color:#fff001;
+		}
+
+		#navigation .sup li{
+			margin: 10px 0 !important;
+			margin:-4px 0;
+			font-size:13px;
+
+		}
+		#navigation a.scrolling{
+			color:#933;
+		}
+		#navigation .header {
+			width: 580px;
+			margin: 0 auto 20px;
+			position: relative;
+			padding: 9px 36px 0 31px;
+			min-height: 90px;
+			text-align: center;
+			color: #ddeaf5;
+		}
+		#navigation .header .trace.left {
+			width: 82px;
+			height: 2px;
+			top: 0;
+			left: 0;
+		}
+		#navigation .header .trace.right {
+			top: 17px;
+			right: 12px;
+			width: 4px;
+			height: 82px;
+		}
+		#navigation .header .trace.bottom {
+			right: 0;
+			top: 80px;
+			width: 82px;
+			height: 2px;
+		}
+
+		#navigation .header .trace {
+			position: absolute;
+			background-color: #1979bc;
+		}
+.submenu {
+	position: relative;
+	margin-top: 65px;
+}
+.section{
+	width:1900px;
+	position:relative;
+}
+
+	.section .sub{
+		position:relative;
+		float:left;
+		padding:10px 25px 40px 25px;
+		width:500px;
+		height:730px;
+	}
+		.section .sub p{
+			width:450px;
+			margin:16px 0;
+			font-size:85%;
+			line-height:1.4em;
+		}
+		.section .next, .section .prev{
+			font-size:18px;
+			position:absolute;
+			bottom:15px;
+			letter-spacing:-2px;
+		}
+		.section .next{
+			right:30px;
+		}
+		.section .prev{
+			left:30px;
+		}
+
+.message{
+	background:#EEE;
+	border:1px solid #999;
+	color:#333;
+	font-size:12px;
+	padding:1px;
+	position:absolute;
+	left:11px;
+}
+#first{
+	top:484px !important;
+	top:498px;			
+}
+#second{
+	top:503px !important;
+	top:517px;			
+}

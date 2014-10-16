@@ -1,18 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <meta name="copyright" content="">
+    <meta name="robots" content="all">
+    <link rel="icon" href="favicon.png">
 
     <title>STORM Security</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/scrollTo-min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+    <script type="text/javascript" src="js/jquery.localscroll-min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <!-- Include jQuery ScrollTo -->
+    <script type="text/javascript" src="js//jquery-scrollto.js"></script>
+    <!-- Include Validate -->
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -24,13 +41,57 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom styles for this template -->
-    <link href="css/carousel.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="css/carousel.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/base-clip.css" rel="stylesheet" type="text/css">
+    <link href="css/style-clip.css" rel="stylesheet" type="text/css">
+
+
+    <script type='text/javascript'>
+
+    $(function() { //When the document loads
+      $("#Start").bind("click", function() {
+      $('#Home').ScrollTo();
+      return false; //Prevent Default and event bubbling.
+      });
+    });
+
+      $(function() { //When the document loads
+      $("#Con").bind("click", function() {
+      $('#Content').ScrollTo();
+      return false; //Prevent Default and event bubbling.
+      });
+    });
+
+      $(function() { //When the document loads
+      $("#Cont").bind("click", function() {
+      $('#Contato').ScrollTo();
+      return false; //Prevent Default and event bubbling.
+      });
+    });
+
+
+    </script>
+
+    <script>
+      $.validator.setDefaults({
+        submitHandler: function() {
+          alert("submitted!");
+        }
+      });
+
+      $().ready(function() {
+        // validate the comment form when it is submitted
+        $("#commentForm").validate();
+    });
+    </script>
+
+
   </head>
-<!-- NAVBAR
-================================================== -->
-  <body>
+  <body id="Home">
+
+  <!-- NAVBAR -->
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -43,29 +104,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <h1 class="logo">
-                <a class="navbar-brand" href="#">Storm Security</a>
+              <h1 class="logo nameno">
+                <a class="navbar-brand" href="#" id="Start" style="display:block; width:100%; height:100%;">Storm Security</a>
               </h1>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                 <li class="active"><a href="#about">Conheça a Storm</a></li>
-                <li><a href="#about">Portfolio</a></li>
-                <li><a href="#about">Produtos</a></li>
-                <li><a href="#about">Clipping</a></li>
-                <li><a href="#contact">Faça Contato</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
+                <li class="active"><a href="#" id="Con" rel="Content" title="Conheça a STORM">Conheça a Storm</a></li>
+                <li><a href="#Portfolio" rel="#Portfolio" title="Veja o Portfolio">Portfolio</a></li>
+                <li><a href="#Produtos" rel="#Produtos" title="Nossos produtos">Produtos</a></li>
+                <li><a href="#Clipping" rel="#Clipping" title="Clipping">Clipping</a></li>
+                <li><a href="#" id="Cont" rel="Contato" title="Entre em contato com STORM">Faça Contato</a></li>
               </ul>
             </div>
           </div>
@@ -73,34 +122,42 @@
 
       </div>
     </div>
-
+    <!-- /NAVBAR -->
 
     <!-- CAROUSEL -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
-      <ol class="carousel-indicators">
+      <!-- <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
+      </ol> -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Loren</h1>
-              <p>Loren ipsum dolor</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ipsum</a></p>
+              <img src="img/bgslide.png" alt="Telecine Play">
+              <article>
+              <h1>Telecine Play</h1>
+              <p>It amet, consectetur adipiscing elit nullam non placerat nunc, nec</p>
+              </article>
+              <figure>
+              <img src="img/img_slide_tcplay.png" alt="Telecine Play">
+              </figure>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Ipsum</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Loren</a></p>
+            <img src="img/bgslide.png" alt="Sochi2014">
+              <article>
+              <h1>Sochi 2014</h1>
+              <p>Desenvolvimento e conteúdo do Aplicativo Android para as Olimpíadas de Inverno de Sochi.</p>
+              </article>
+              <figure>
+                <img src="img/img_slide_tcplay.png" alt="Telecine Play">
+              </figure>
             </div>
           </div>
         </div>
@@ -108,9 +165,14 @@
           <img src="" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Ipsum</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Loren</a></p>
+              <img src="img/bgslide.png" alt="Telecine Play">
+              <article>
+              <h1>Multishow Ao Vivo</h1>
+              <p>It amet, consectetur adipiscing elit nullam non placerat nunc.</p>
+              </article>
+              <figure>
+              <img src="img/img_slide_tcplay.png" alt="Telecine Play">
+              </figure>
             </div>
           </div>
         </div>
@@ -119,79 +181,115 @@
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 
-    <!-- CAROUSEL -->
+    <!-- /CAROUSEL -->
 
-    <section id="Content" class="container" data="">
+    <!-- CLIPPING -->
+    <section id="Content"  data-id="Content">
+    <div class="jumbotron jumbContent">
+    <ul id="navigation">
+      <header>
+        <span class="trace left"></span>
+        <span class="trace right"></span>
+        <span class="trace bottom"></span>
+      </header>
+      <li class="sup">
+        <ul>
+          <li><a href="#section1a">Pequenas empresas grandes negócios</a></li>
+          <li><a href="#section1b" class="active">O Globo Blogs - Inovação</a></li>
+          <li><a href="#section1c">Revista Galileu</a></li>
+        </ul>         
+      </li>
+    </ul>         
+    <img class="submenu" src="img/submenu.png" alt="Submenu Funções">                    
+    <div id="content2">
+      <div class="section">
+        <ul>
+          <li class="sub" id="section1a">
+            <h2>Pequenas empresas grandes negócios</h2>
+            <h3>Ex-hacker brasileiro projeta miniaviões para encontrar carros roubados, vigiar fazendas e gerenciar o trânsito</h3>
+            <img class="img-rectangle" src="img/clip_storm_01.jpg" alt="Generic placeholder image" style="width: 457px; height: 335px;">
+            <p>O tempo não decide entre ensolarado, nublado e chuvoso na Ilha de Guaratiba — bairro do Rio de Janeiro a 45 km do centro. “É bom que a gente já vê se o aviãozinho se garante em qualquer clima”, diz o engenheiro Wanderley Abreu Júnior. É o primeiro teste oficial do seu Veículo Aéreo Não Tripulado (doravante, Vant). Quem olha não dá nada. O aeromodelo mede 1,60 m da ponta de uma asa à da outra e pesa 750 g, mas tem versões maiores — de 3,5 kg e de 20 kg. O design também não é o forte, mas isso não parece preocupar Abreu Júnior. Seu negócio não é fabricar as aeronaves, mas o sistema de câmeras e sensores infravermelhos que as transforma em robôs de vigilância e monitoramento de tráfego.
 
-      <!-- CLIPPING -->
-      
-      <div class="row">
-        <div class="col-lg-8">
-        <h2>Pequenas empresas grandes negócios</h2>
-          <img class="img-rectangle" src="img/clip_storm_01.jpg" alt="Generic placeholder image" style="width: 457px; height: 335px;">
-          <p>O tempo não decide entre ensolarado, nublado e chuvoso na Ilha de Guaratiba — bairro do Rio de Janeiro a 45 km do centro. “É bom que a gente já vê se o aviãozinho se garante em qualquer clima”, diz o engenheiro Wanderley Abreu Júnior. É o primeiro teste oficial do seu Veículo Aéreo Não Tripulado (doravante, Vant). Quem olha não dá nada. O aeromodelo mede 1,60 m da ponta de uma asa à da outra e pesa 750 g, mas tem versões maiores — de 3,5 kg e de 20 kg. O design também não é o forte, mas isso não parece preocupar Abreu Júnior. Seu negócio não é fabricar as aeronaves, mas o sistema de câmeras e sensores infravermelhos que as transforma em robôs de vigilância e monitoramento de tráfego.
+            Os Vants desenvolvidos pelo brasileiro são bem diferentes daqueles que ficaram conhecidos por custarem milhões de dólares e participarem de ações militares como a Guerra do Afeganistão e a captura de Bin Laden. Fazem parte de uma nova leva de veículos mais baratos, com menos recursos e projetados para o uso civil. Abreu Júnior não está só. A polícia da Austrália já recomendou ao governo...</p>        
+          </li>
+          <li class="sub" id="section1b">
+           <h2>O Globo Blogs - Inovação</h2>
+            <img class="img-rectangle" src="img/clip_storm_01.jpg" alt="Generic placeholder image" style="width: 457px; height: 335px;">
+            <p>O tempo não decide entre ensolarado, nublado e chuvoso na Ilha de Guaratiba — bairro do Rio de Janeiro a 45 km do centro. “É bom que a gente já vê se o aviãozinho se garante em qualquer clima”, diz o engenheiro Wanderley Abreu Júnior. É o primeiro teste oficial do seu Veículo Aéreo Não Tripulado (doravante, Vant). Quem olha não dá nada. O aeromodelo mede 1,60 m da ponta de uma asa à da outra e pesa 750 g, mas tem versões maiores — de 3,5 kg e de 20 kg. O design também não é o forte, mas isso não parece preocupar Abreu Júnior. Seu negócio não é fabricar as aeronaves, mas o sistema de câmeras e sensores infravermelhos que as transforma em robôs de vigilância e monitoramento de tráfego.
 
-          Os Vants desenvolvidos pelo brasileiro são bem diferentes daqueles que ficaram conhecidos por custarem milhões de dólares e participarem de ações militares como a Guerra do Afeganistão e a captura de Bin Laden. Fazem parte de uma nova leva de veículos mais baratos, com menos recursos e projetados para o uso civil. Abreu Júnior não está só. A polícia da Austrália já recomendou ao governo...</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-8"></div>
-      </div><
+            Os Vants desenvolvidos pelo brasileiro são bem diferentes daqueles que ficaram conhecidos por custarem milhões de dólares e participarem de ações militares como a Guerra do Afeganistão e a captura de Bin Laden. Fazem parte de uma nova leva de veículos mais baratos, com menos recursos e projetados para o uso civil. Abreu Júnior não está só. A polícia da Austrália já recomendou ao governo...</p>
+          </li>
+          <li class="sub" id="section1c">
+           <h2>Revista Galileu</h2>
+            <img class="img-rectangle" src="img/clip_storm_01.jpg" alt="Generic placeholder image" style="width: 457px; height: 335px;">
+            <p>O tempo não decide entre ensolarado, nublado e chuvoso na Ilha de Guaratiba — bairro do Rio de Janeiro a 45 km do centro. “É bom que a gente já vê se o aviãozinho se garante em qualquer clima”, diz o engenheiro Wanderley Abreu Júnior. É o primeiro teste oficial do seu Veículo Aéreo Não Tripulado (doravante, Vant). Quem olha não dá nada. O aeromodelo mede 1,60 m da ponta de uma asa à da outra e pesa 750 g, mas tem versões maiores — de 3,5 kg e de 20 kg. O design também não é o forte, mas isso não parece preocupar Abreu Júnior. Seu negócio não é fabricar as aeronaves, mas o sistema de câmeras e sensores infravermelhos que as transforma em robôs de vigilância e monitoramento de tráfego.</p>
+          </li>              
+        </ul>
+    </div>
+
+    </div>
     </section>
+    <!-- /CLIPPING -->
 
 
-      <!-- FORM -->
-    <div class="container marketing">
-      <hr class="featurette-divider">
+    <!-- FORM -->
+    <section id="Contato" data-id="Contato">
+      <div class="jumbotron jumbContact">
+          <div class="container">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <article class="formContato fl">
-      <h3 class="titulo">Mande sua mensagem</h3>
-      <form action="" method="post"><input type="hidden" name="" value="">
-        <fieldset>
-          <input type="text" defaultvalue="seu nome" value="seu nome" class="" name="">
-        </fieldset>
+            <header class="header">
+              Envie-nos uma solicitação, dúvida, sugestão ou crítica. Nossa equipe responderá o contato o quanto antes
+              <span class="trace left"></span>
+              <span class="trace right"></span>
+              <span class="trace bottom"></span>
+            </header>
 
-        <fieldset>
-          <input type="text" defaultvalue="seu email" value="seu email" class="" name="">
-        </fieldset>
-
-        <fieldset>
-          <textarea name="msg" id="" defaultvalue="sua mensagem" class="" cols="30" rows="10">sua mensagem</textarea>
-        </fieldset>
-
-        <div class="msg-sucesso">
-          Mensagem enviada com sucesso!
-        </div>
-        
-        <input type="image" src="" value="enviar" class="">
-        
-      </form>
-
-    </article>
-        </div>
-        <div class="col-md-5">
-        </div>
+            <div class="row">
+              <div class="col-md-6">
+                <article class="contactForm">
+                  
+                  <!-- <form action="" method="post"><input type="hidden" name="" value="">-->
+                <div id="main">
+                  <form class="cmxform" id="commentForm" method="get" action="" novalidate="novalidate">
+                    <fieldset>
+                      <legend>Mande sua mensagem</legend>
+                      <p>
+                        <input id="cname" name="name" minlength="2" type="text" required="" aria-required="true" defaultvalue="seu nome" value="seu nome">
+                      </p>
+                      <p>
+                        <input id="cemail" type="email" name="email" required="" aria-required="true" defaultvalue="email" value="email">
+                      </p>
+                      <p>
+                        <textarea id="ccomment" name="comment" required="" aria-required="true" cols="30" rols="10">sua mensagem</textarea>
+                      </p>
+                      <p>
+                        <input type="image" src="img/btenviar.png" class="submit" type="submit" value="Submit">
+                      </p>
+                    </fieldset>
+                  </form>
+                </div>
+              <div class="col-md-6">
+              <span>Rio de Janeiro
+                Av. Lúcio Costa 3400 - Sl 304. Barra da Tijuca
+                Rio de Janeiro / RJ - CEP 22630-010
+                Office: +55 (21) 3734-0695
+              </span>
+              <span>New York
+                136 Madison Avenue - New York, NY 10016
+                Office: +1 (646) 722 3838
+              </span>
+              </div>
+            </div>
+          </div>
       </div>
-
-      <hr class="featurette-divider">
-
+    </section>
       <!-- /FORM -->
 
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-
-    </div><!-- /.container -->
-
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

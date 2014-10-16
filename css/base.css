@@ -1,28 +1,259 @@
+@media (min-width: 768px) {
 .logo {
 	position: relative;
-	top: -8px;
+	top: 12px;
 	left: 24px;
 	background: url(../img/logo_storm.png) no-repeat 0 0;
 	width: 280px;
 	height: 26px;
+	margin: 0px;
+}
+
+.navbar-nav {
+	margin: 0 0 0 60px;
+}
+
+.nav>li>a {
+	padding-right: 5px;
+	padding-left: 5px;
+	margin: 0 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #cecece;
+	font-family: 'Trebuchet MS';
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+	border-bottom-color: yellow;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	background-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	background: url(../img/bgmenu.png) repeat-x 0 0;
 }
 
 #Content {
 	width: 100%;
-	height: 898px;
+	height: 770px;
 	background-color: rgb(0,0,0);
 	margin-right: auto;
 	margin-left: auto;
-
 }
 
+.nameno {	text-indent: -3000px;}
 .navbar-brand{
 	padding: 0px;
 	height: 0px;
-	left: -3000px;
 	position: absolute;
 }
 
 .carousel-inner {
 	background-color: blue;
+}
+
+.navbar-wrapper .navbar {
+	position: fixed;
+	width: 986px;
+	margin-left: 5%;
+}
+
+.jumbContent {
+	height: 770px;
+	background-color: #161616;
+	margin-bottom: 0px;
+}
+.jumbContact{
+	height: 652px;
+	background-image: url(../img/bgdarkblue.png);
+  	background-repeat: repeat;
+  	font-family: 'Gilda Display', serif;
+}
+
+.carousel {
+	margin-bottom: 0px;
+	height: 522px;
+}
+
+#Contato .header {
+	width: 580px;
+	margin: 0 auto 20px;
+	position: relative;
+	padding: 9px 36px 0 31px;
+	min-height: 90px;
+	text-align: center;
+	color: #ddeaf5;
+	font-size: 22px;
+	font-family: "Adobe Garamond", times, serif;
+}
+
+#Contato .header .trace.left {
+	width: 82px;
+	height: 2px;
+	top: 0;
+	left: 0;
+}
+#Contato .header .trace.right {
+	top: 17px;
+	right: 12px;
+	width: 4px;
+	height: 82px;
+}
+#Contato .header .trace.bottom {
+	right: 0;
+	top: 80px;
+	width: 82px;
+	height: 2px;
+}
+
+#Contato .header .trace {
+	position: absolute;
+	background-color: #1979bc;
+}
+
+#Contato .contactForm fieldset {
+	display: block;
+	position: relative;
+	padding-bottom: 10px;
+	float:right;
+	background: url(../img/bgshadow.png) no-repeat right top;
+	padding-right: 35px;
+
+}
+
+#Contato .contactForm legend {
+	border-bottom: none;
+	font-family: "Adobe Garamond", times, serif;
+	font-size: 17px;
+	color:#ddeaf5;
+}
+
+#Contato .contactForm input[type=text], #Contato .contactForm input[type=email], #Contato .contactForm textarea {
+	background-color: #e4f2fd;
+	display: block;
+	font-size: 16px;
+	color: #171717;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	padding-left: 10px;
+	border: none;
+}
+
+#Contato .contactForm input[type=text], #Contato .contactForm input[type=email], #Contato .contactForm textarea {
+	width: 382px;
+	padding-right: 3px;
+	padding-top: 9px;
+	padding-bottom: 3px;
+}
+#Contato .contactForm textarea {
+	overflow-y: auto;
+	height: 110px;
+	margin-bottom: 5px;
+	float:right;
+}
+#Contato .contactForm input[type=image] {
+	float:right;
+	margin-top: 10px;
+}
+.carousel-control {
+	width: 20%;
+	color: #fff001;
+	opacity: 1;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+	margin-right: 30px;
+	background: url(../img/setas-carrossel.png) no-repeat -38px 0;
+	text-indent: -3000px;
+}
+.carousel-control .glyphicon-chevron-right:hover, .carousel-control .icon-next:hover {
+	margin-right: 30px;
+	background: url(../img/setas-carrossel.png) no-repeat -1px 0;
+	text-indent: -3000px;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+	margin-left: 30px;
+	background: url(../img/setas-carrossel.png) no-repeat -38px -64px;
+	text-indent: -3000px;
+}
+.carousel-control .glyphicon-chevron-left:hover, .carousel-control .icon-prev:hover {
+	margin-left: 30px;
+	background: url(../img/setas-carrossel.png) no-repeat -1px -64px;
+	text-indent: -3000px;
+}
+.carousel-caption {
+	right: 15%;
+	left: 15%;
+}
+.carousel-caption figure {
+	position: relative;
+}
+.carousel-caption figure img {
+	position: absolute;
+	top: -325px;
+	left: 395px;
+}
+.carousel-caption img {
+	top: 235px;
+	left:-20px;
+	position: relative;
+}
+.carousel-caption h1 {
+	color: #e4f2fd;
+	font-family: "Trebuchet MS";
+	font-size: 45px;
+	webkit-text-shadow: 1px 1px 1px #000000;
+	text-shadow: 1px 1px 1px #000000;
+	margin-bottom: 0px;
+}
+.carousel-caption p {
+	color: #0f2e41;
+	font-family: "Trebuchet MS";
+	font-size: 22px;
+	webkit-text-shadow: 0 0 0;
+	text-shadow: 0 0 0;
+	width: 45%;
+}
+.carousel-caption article, .carousel-caption figure {
+	z-index: 11;
+	position: relative;
+}
+.carousel-caption article {
+	text-align: left;
+	bottom: -30px;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+	width: 37px;
+	height: 64px;
+	margin-top:0px;
+}
+
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+	z-index: 16;
+}
+
+
+}
+
+@media screen and (max-width: 767px) {
+.logo {
+	position: relative;
+	top: 12px;
+	left: 24px;
+	background: url(../img/logo_storm.png) no-repeat 0 0;
+	width: 280px;
+	height: 26px;
+	margin: 0px;
+}
+.nameno {	text-indent: -3000px;}
+.navbar-wrapper .navbar {
+	position: fixed;
+	width: 100%;
+}
 }
